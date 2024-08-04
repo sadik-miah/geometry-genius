@@ -5,12 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
 
 </head>
 
-<body>
+<body class="p-8 bg-blue-950">
+    <header>
 
+    </header>
+    <main>
+        <!-- main content container  -->
+        <div class="flex gap-5">
+            <!-- shape card container -->
+            <div class="flex-1 grid grid-cols-3 gap-3">
+                <!-- triangle  -->
+                <div class="card bg-base-100 shadow-xl p-4 bg-blue-950 text-white border-2 border-cyan-400">
+                    <figure>
+                        <img src="images/triangle.png" alt="Shoes" />
+                    </figure>
+                    <div class="flex flex-col items-center gap-3 pt-4">
+                        <h2 class="font-bold text-xl">Triangle</h2>
+                        <p class="font-semibold">Area (A) = 0.5 X b X h</p>
+                        <div>
+                            <input id="triangle-base" type="text" placeholder="b"
+                                class="text-2xl px-2 py-1 w-24 rounded-sm text-red-200">
+                            <span>cm</span>
+                            <input id="triangle-height" type="text" placeholder="h"
+                                class="text-2xl px-2 py-1 w-24 rounded-sm text-red-200">
+                            <span>cm</span>
+                        </div>
+                        <div>
+                            <p class="text-xl font-semibold">Area : <span id="Area"></span><span> cm<sup>2</sup></span>
+                            </p>
+                        </div>
+
+                        <button onclick="calculateTriangleArea()"
+                            class="btn bg-blue-500 text-white font-bold text-lg w-full">Calculate</button>
+
+                    </div>
+                </div>
+                <!-- Rectangle -->
+                <div class="card bg-base-100 shadow-xl p-4">
+                    <figure>
+                        <img src="images/rectangle.png" alt="Shoes" />
+                    </figure>
+                    <div class="flex flex-col items-center gap-3 pt-4">
+                        <h2 class="font-bold text-xl">Triangle</h2>
+                        <p class="font-semibold">Area (A) = 0.5 X b X h</p>
+                        <input type="text" placeholder="b">
+                        <span>cm</span>
+                        <input type="text" placeholder="h">
+                        <span>cm</span>
+
+                        <button class="btn bg-blue-500 text-white font-bold text-lg w-full">Calculate</button>
+
+                    </div>
+                </div>
+                <!-- Parallelogram -->
+                <div class="card bg-base-100 shadow-xl p-4">
+                    <figure>
+                        <img src="images/parallelogram.png" alt="Shoes" />
+                    </figure>
+                    <div class="flex flex-col items-center gap-3 pt-4">
+                        <h2 class="font-bold text-xl">Triangle</h2>
+                        <p class="font-semibold">Area (A) = 0.5 X b X h</p>
+
+                        <button class="btn bg-blue-500 text-white font-bold text-lg w-full">Calculate</button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- area calculate container -->
+            <div class="w-80 border-2 border-gray-200 rounded-md">
+                <h1 class="text-3xl text-center p-4 text-white">Area calculation</h1>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/triangle.js"></script>
 </body>
 
 </html>
